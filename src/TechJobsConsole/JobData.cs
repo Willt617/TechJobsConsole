@@ -57,6 +57,10 @@ namespace TechJobsConsole
 
             return jobs;
         }
+        public static List<Dictionary<string,string>> FindByValue(string value)
+        {
+
+        }
 
         /*
          * Load and parse data from job_data.csv
