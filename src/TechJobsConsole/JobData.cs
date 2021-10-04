@@ -50,9 +50,12 @@ namespace TechJobsConsole
             {
                 string aValue = row[column].ToLower(); ;
 
-                if (aValue.Contains(value))
+                if (aValue.Contains(lowValue))
                 {
-                    jobs.Add(row);
+                    if(jobs.Contains(row))
+                        continue;
+                    else
+                        jobs.Add(row);
                 }
             }
 
@@ -73,7 +76,10 @@ namespace TechJobsConsole
 
                     if (lowDesc.Contains(lowValue))
                     {
-                        jobs.Add(row);
+                        if(jobs.Contains(row))
+                            continue;
+                        else
+                            jobs.Add(row);;
                     }
                 }
             }
